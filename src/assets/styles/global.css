@@ -152,6 +152,14 @@ section {
   /* Altura mínima padrão */
 }
 
+/* Alinhamento com seções específicas */
+.introSection,
+.servicesSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-large);
+}
+
 /* Estilo de botões principais */
 .cta-button {
   background-color: var(--primary-color);
