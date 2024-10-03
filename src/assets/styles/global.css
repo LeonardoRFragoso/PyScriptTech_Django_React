@@ -13,7 +13,7 @@
   --primary-color: #00aaff;
   --heading-color: #ffffff;
   --shadow-btn: rgba(0, 168, 255, 0.5);
-  --shadow-btn-hover: rgba(0, 168, 255, 0.5);
+  --shadow-btn-hover: rgba(0, 168, 255, 0.8);
 
   /* Espaçamentos */
   --spacing-small: 10px;
@@ -23,6 +23,8 @@
   /* Transições e bordas */
   --transition-fast: 0.3s;
   --border-radius: 5px;
+  --section-height: 550px;
+  /* Altura mínima padrão para seções */
 }
 
 * {
@@ -45,6 +47,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Contêiner global da página */
 .page-container {
   margin: var(--spacing-medium);
   max-width: 1200px;
@@ -79,6 +82,7 @@ button {
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: background-color var(--transition-fast) ease, transform var(--transition-fast) ease, box-shadow var(--transition-fast) ease;
+  box-shadow: 0 2px 8px var(--shadow-btn);
 }
 
 button:hover {
@@ -144,7 +148,8 @@ section {
   border-radius: 10px;
   margin-bottom: var(--spacing-medium);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  /* Sombra mais suave e leve */
+  min-height: var(--section-height);
+  /* Altura mínima padrão */
 }
 
 /* Estilo de botões principais */
