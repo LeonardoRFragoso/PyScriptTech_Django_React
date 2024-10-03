@@ -9,7 +9,6 @@
 .projectsTitle {
   text-align: center;
   font-size: 42px;
-  /* Título grande e centralizado */
   color: #00aaff;
   margin-bottom: 40px;
 }
@@ -17,8 +16,7 @@
 .projectsContainer {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  /* Espaçamento entre os itens do projeto */
+  gap: 50px;
   align-items: center;
 }
 
@@ -32,13 +30,13 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   max-width: 1000px;
   width: 100%;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projectItem:hover {
   transform: scale(1.02);
-  /* Efeito de hover suave para aumentar levemente o projeto */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8);
+  /* Leve aumento na sombra no hover */
 }
 
 .projectImage {
@@ -47,12 +45,13 @@
   border-radius: 10px;
   width: 300px;
   margin-right: 25px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projectItem:hover .projectImage {
   transform: scale(1.05);
-  /* Aumenta levemente a imagem no hover */
+  box-shadow: 0 6px 15px rgba(0, 168, 255, 0.5);
+  /* Sombra mais forte ao hover da imagem */
 }
 
 .projectDescription {
@@ -74,8 +73,10 @@
 }
 
 .projectTechnologies h3 {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: #00ffcc;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 .projectTechnologies ul {
@@ -89,7 +90,9 @@
 
 .projectVideo h3 {
   margin-top: 20px;
+  margin-bottom: 10px;
   color: #00ffcc;
+  font-size: 20px;
 }
 
 .projectVideo video {
@@ -97,7 +100,13 @@
   height: auto;
   border-radius: 5px;
   box-shadow: 0 4px 15px rgba(0, 168, 255, 0.4);
-  /* Adiciona sombra ao vídeo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectVideo video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 168, 255, 0.5);
+  /* Efeito de hover no vídeo aprimorado */
 }
 
 @media (max-width: 768px) {

@@ -7,12 +7,12 @@ import project3 from '../../assets/img/project3.png';
 import project4 from '../../assets/img/project4.png';
 import project5 from '../../assets/img/project5.png';
 import project6 from '../../assets/img/project6.png';
-import video1 from '../../assets/img/video1.mp4'; // Caminho corrigido
-import video2 from '../../assets/img/video2.mp4'; // Caminho corrigido
-import video3 from '../../assets/img/video3.mp4'; // Caminho corrigido
-import video4 from '../../assets/img/video4.mp4'; // Caminho corrigido
-import video5 from '../../assets/img/video5.mp4'; // Caminho corrigido
-import video6 from '../../assets/img/video6.mp4'; // Caminho corrigido
+import video1 from '../../assets/video/video1.mp4'; // Caminho corrigido
+import video2 from '../../assets/video/video2.mp4'; // Caminho corrigido
+import video3 from '../../assets/video/video3.mp4'; // Caminho corrigido
+import video4 from '../../assets/video/video4.mp4'; // Caminho corrigido
+import video5 from '../../assets/video/video5.mp4'; // Caminho corrigido
+import video6 from '../../assets/video/video6.mp4'; // Caminho corrigido
 
 const projectsData = [
   {
