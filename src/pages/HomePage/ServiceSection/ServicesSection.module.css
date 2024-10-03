@@ -12,7 +12,7 @@
   --spacing-medium: 20px;
   --spacing-large: 40px;
   --border-radius: 10px;
-  --neon-border-color: rgba(0, 168, 255, 1);
+  --neon-border-color: rgba(0, 168, 255, 0.8);
 }
 
 /* Section de Serviços */
@@ -24,7 +24,8 @@
   margin: var(--spacing-large) auto;
   box-shadow: 0 4px 20px var(--color-shadow);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  /* Garantir que as setas fiquem visíveis */
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   display: flex;
   flex-direction: column;
@@ -70,8 +71,19 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  overflow: visible;
+  /* Garantir que as setas fiquem visíveis */
+  position: relative;
 }
 
+/* Estilos das setas do carrossel */
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  /* Elevar o z-index das setas para garantir que elas fiquem visíveis */
+}
+
+/* Serviço */
 .serviceItem {
   display: flex;
   flex-direction: row;
