@@ -2,22 +2,22 @@
 
 .servicesPage {
   padding: 100px 50px 80px;
-  background-color: #121212;
+  background-color: #0d0d0d;
   color: #ffffff;
 }
 
 .servicesTitle {
   text-align: center;
   font-size: 42px;
-  /* Tamanho maior para o título */
   color: #00aaff;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  text-shadow: 0px 0px 8px #00aaff;
 }
 
 .servicesContainer {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 60px;
   align-items: center;
 }
 
@@ -25,12 +25,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* Centraliza os elementos verticalmente */
   background-color: #1f1f1f;
+  border: 1px solid #00aaff;
   margin-bottom: 50px;
   border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 168, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 1000px;
   width: 100%;
@@ -38,7 +38,7 @@
 
 .serviceItem:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 25px rgba(0, 168, 255, 0.7);
 }
 
 .serviceImage {
@@ -47,14 +47,13 @@
   border-radius: 10px;
   width: 300px;
   margin-right: 25px;
-  /* Espaçamento ajustado para mais respiro */
-  transition: transform 0.3s ease;
-  /* Transição suave */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 4px 15px rgba(0, 168, 255, 0.5);
 }
 
 .serviceItem:hover .serviceImage {
   transform: scale(1.05);
-  /* Aumenta a imagem levemente no hover */
+  box-shadow: 0 0 20px rgba(0, 168, 255, 0.7);
 }
 
 .serviceDescription {
@@ -63,26 +62,43 @@
 }
 
 .serviceTitle {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
   color: #00aaff;
+  text-shadow: 0px 0px 5px #00aaff;
 }
 
 .serviceText {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 20px;
   line-height: 1.85;
-  /* Ajuste no espaçamento das linhas para melhor legibilidade */
-  color: #bfbfbf;
-  margin-bottom: 20px;
-  /* Espaçamento entre o texto e o botão */
+  color: #d0d0d0;
+  margin-bottom: 25px;
 }
 
-.serviceText strong {
-  font-weight: 600;
+.serviceButton {
+  background-color: #00aaff;
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 0px 15px rgba(0, 168, 255, 0.5);
 }
 
-/* Responsividade */
+.serviceButton:hover {
+  background-color: #0099cc;
+  color: #ffffff;
+  transform: scale(1.02);
+  box-shadow: 0px 0px 15px rgba(0, 153, 204, 0.4);
+}
+
+
+
 @media (max-width: 768px) {
   .serviceItem {
     flex-direction: column;
@@ -96,35 +112,6 @@
 
   .serviceText {
     font-size: 18px;
-    font-weight: 400;
     line-height: 1.8;
-    color: #bfbfbf;
   }
-
-  .serviceText strong {
-    font-weight: 600;
-  }
-}
-
-.serviceButton {
-  background-color: #00aaff;
-  color: #fff;
-  padding: 12px 25px;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
-  /* Mais espaço acima do botão */
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 168, 255, 0.4);
-}
-
-.serviceButton:hover {
-  background-color: #0077cc;
-  /* Cor de fundo mais escura para hover */
-  color: #ffffff;
-  /* Mantém o texto branco no hover */
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 168, 255, 0.6);
-  /* Sombra mais intensa */
 }

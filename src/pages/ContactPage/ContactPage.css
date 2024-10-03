@@ -1,5 +1,3 @@
-/* src/pages/ContactPage/ContactPage.css */
-
 /* Ajustes gerais */
 .contactPage {
   padding: 80px 20px;
@@ -26,12 +24,13 @@
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-  border: 1px solid #2a2a2a;
-  transition: box-shadow 0.3s ease;
+  border: 1px solid #00aaff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .contactForm:hover {
-  box-shadow: 0 0 20px rgba(0, 168, 255, 0.2);
+  box-shadow: 0 0 25px rgba(0, 168, 255, 0.5);
+  transform: scale(1.02);
 }
 
 /* Estilização dos campos de input e textarea */
@@ -42,21 +41,16 @@
   font-weight: 500;
   border-radius: 5px;
   border: 1px solid #00aaff;
-  /* Tom de azul aplicado nas bordas */
   background-color: #2b2b2b;
   color: #ffffff;
   box-shadow: 0px 0px 5px rgba(0, 168, 255, 0.5);
-  /* Azul aplicado na sombra */
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Estilo quando o campo está em foco */
 .formGroup input:focus,
 .formGroup textarea:focus {
   border-color: #00ccff;
-  /* Azul claro suave no foco */
   box-shadow: 0px 0px 8px rgba(0, 204, 255, 0.7);
-  /* Suave brilho no foco */
   outline: none;
 }
 
@@ -76,7 +70,7 @@
   font-size: 18px;
   font-weight: 700;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0px 0px 15px rgba(0, 168, 255, 0.5);
@@ -84,8 +78,8 @@
 
 .submitButton:hover {
   background-color: #0099cc;
-  transform: scale(1.02);
-  box-shadow: 0px 0px 15px rgba(0, 153, 204, 0.4);
+  transform: scale(1.03);
+  box-shadow: 0px 0px 20px rgba(0, 153, 204, 0.5);
 }
 
 /* Seção do WhatsApp e Email */
@@ -101,62 +95,67 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px 30px;
-  font-size: 18px;
+  padding: 20px 30px;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none;
+  color: #ffffff;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 168, 255, 0.4);
+  text-align: center;
 }
 
 /* Botão do WhatsApp */
 .whatsappButton {
   background-color: #1ebe54;
-  color: #ffffff;
   border: 2px solid #25D366;
+  color: #ffffff;
 }
 
 .whatsappButton:hover {
   background-color: #25D366;
-  transform: scale(1.03);
-  box-shadow: 0px 0px 15px rgba(37, 211, 102, 0.5);
+  color: #ffffff;
+  /* Garante que o texto continue branco no hover */
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px rgba(37, 211, 102, 0.8);
+  /* Sombra neon verde */
 }
 
 .whatsappButton img {
-  width: 28px;
-  height: 28px;
-  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
 }
 
 /* Botão do Gmail */
 .gmailButton {
   background-color: #ffffff;
-  color: #DB4437;
   border: 2px solid #DB4437;
+  color: #DB4437;
 }
 
 .gmailButton:hover {
   background-color: #f5f5f5;
-  transform: scale(1.03);
-  box-shadow: 0px 0px 15px rgba(219, 68, 55, 0.5);
+  /* Fundo suavemente claro */
+  color: #DB4437;
+  /* Mantém o texto vermelho no hover */
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px rgba(219, 68, 55, 0.8);
+  /* Sombra neon vermelha */
 }
 
 .gmailButton img {
-  width: 28px;
-  height: 28px;
-  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
 }
 
 /* Ajustes para mobile */
 @media (max-width: 768px) {
-  .contactForm {
-    width: 100%;
-    padding: 20px;
-  }
-
   .whatsappSection {
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
 
   .whatsappButton,
