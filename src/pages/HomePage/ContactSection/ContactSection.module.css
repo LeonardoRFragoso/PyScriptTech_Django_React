@@ -12,23 +12,46 @@
   --color-shadow: rgba(0, 0, 0, 0.2);
   --color-shadow-hover: rgba(0, 0, 0, 0.4);
   --shadow-btn: rgba(0, 168, 255, 0.5);
-  --shadow-btn-hover: rgba(0, 168, 255, 0.5);
+  --shadow-btn-hover: rgba(0, 168, 255, 0.8);
   --spacing-small: 10px;
   --spacing-medium: 15px;
   --spacing-large: 40px;
   --transition-fast: 0.3s;
   --border-radius: 8px;
+  --neon-border-color: rgba(0, 168, 255, 0.8);
 }
 
+/* Section de Contato */
 .contactSection {
-  margin-top: var(--spacing-large);
+  margin: var(--spacing-large) auto;
   text-align: center;
   background: var(--color-bg-section);
-  padding: var(--spacing-large);
+  padding: var(--spacing-large) var(--spacing-medium);
   border-radius: var(--border-radius);
-  border: 2px solid var(--color-border);
-  box-shadow: 0 4px 15px var(--color-shadow);
+  max-width: 2200px;
+  /* Ajuste da largura máxima */
+  box-shadow: 0 4px 20px var(--color-shadow);
+  position: relative;
+  overflow: hidden;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Efeito neon na borda inferior */
+.contactSection:before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--neon-border-color);
+  box-shadow: 0 0 10px var(--neon-border-color), 0 0 25px var(--neon-border-color), 0 0 35px var(--neon-border-color);
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.contactSection:hover:before {
+  box-shadow: 0 0 20px var(--neon-border-color), 0 0 40px var(--neon-border-color), 0 0 60px var(--neon-border-color);
 }
 
 .contactSection:hover {
@@ -36,20 +59,22 @@
   box-shadow: 0 6px 25px var(--color-shadow-hover);
 }
 
+/* Título e descrição */
 .contactSection h2 {
   margin-bottom: var(--spacing-medium);
-  font-size: 28px;
+  font-size: 34px;
   color: var(--color-text-primary);
+  text-shadow: 0px 0px 8px var(--color-text-primary);
 }
 
 .contactSection p {
   color: var(--color-text-secondary);
-  font-size: 16px;
+  font-size: 22px;
   text-align: center;
 }
 
-/* Estilos do formulário */
-.contactSection .contactForm {
+/* Formulário */
+.contactForm {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,9 +82,11 @@
   width: 100%;
 }
 
-.contactSection .contactForm input,
-.contactSection .contactForm textarea {
+.contactForm input,
+.contactForm textarea {
   width: 90%;
+  max-width: 1000px;
+  /* Garantir responsividade */
   padding: var(--spacing-medium);
   margin: var(--spacing-small) 0;
   border: 1px solid var(--color-border);
@@ -70,21 +97,23 @@
   transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.contactSection .contactForm input::placeholder,
-.contactSection .contactForm textarea::placeholder {
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
   color: var(--color-placeholder);
 }
 
-.contactSection .contactForm input:focus,
-.contactSection .contactForm textarea:focus {
+.contactForm input:focus,
+.contactForm textarea:focus {
   background-color: var(--color-input-bg-focus);
   box-shadow: 0 0 10px rgba(0, 168, 255, 0.6);
   outline: none;
 }
 
-/* Estilo do botão */
-.contactSection .contactForm button {
+/* Botão */
+.contactForm button {
   width: auto;
+  font-size: 22px;
+  font-weight: bold;
   background-color: var(--color-btn-bg);
   color: var(--color-btn-text);
   padding: var(--spacing-medium) var(--spacing-large);
@@ -95,8 +124,17 @@
   transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.contactSection .contactForm button:hover {
+.contactForm button:hover {
   background-color: var(--color-btn-hover-bg);
   transform: scale(1.05);
   box-shadow: 0 4px 20px var(--shadow-btn-hover);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+  .contactForm input,
+  .contactForm textarea {
+    width: 100%;
+  }
 }

@@ -89,7 +89,8 @@
   border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: bold;
   transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
   box-shadow: 0 2px 8px var(--shadow-btn);
 }
