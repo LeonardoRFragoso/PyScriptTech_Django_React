@@ -2,7 +2,7 @@
 
 .projectPage {
   padding: 100px 50px 80px;
-  background-color: #121212;
+  background-color: #0d0d0d;
   color: #ffffff;
 }
 
@@ -10,33 +10,38 @@
   text-align: center;
   font-size: 42px;
   color: #00aaff;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  text-shadow: 0px 0px 8px #00aaff;
+  /* Brilho no título */
 }
 
 .projectsContainer {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 70px;
+  /* Espaçamento entre os projetos */
   align-items: center;
 }
 
+/* Estilo dos containers dos projetos */
 .projectItem {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   background-color: #1f1f1f;
   border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  border: 1px solid #00aaff;
   max-width: 1000px;
   width: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projectItem:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8);
-  /* Leve aumento na sombra no hover */
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 168, 255, 0.7);
+  /* Brilho neon no hover */
 }
 
 .projectImage {
@@ -45,38 +50,50 @@
   border-radius: 10px;
   width: 300px;
   margin-right: 25px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .projectItem:hover .projectImage {
   transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 168, 255, 0.5);
-  /* Sombra mais forte ao hover da imagem */
+  box-shadow: 0 0 15px rgba(0, 168, 255, 0.7);
 }
 
 .projectDescription {
   flex: 1;
   text-align: left;
+  padding-left: 40px;
+  /* Mais espaço interno */
 }
 
 .projectTitle {
-  font-size: 24px;
+  font-size: 30px;
+  font-weight: 600;
   margin-bottom: 10px;
   color: #00aaff;
+  text-shadow: 0px 0px 5px #00aaff;
+  transition: text-shadow 0.3s ease;
+}
+
+.projectTitle:hover {
+  text-shadow: 0px 0px 10px #00ffcc;
 }
 
 .projectText {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 20px;
   line-height: 1.8;
-  color: #bfbfbf;
+  margin-bottom: 20px;
+  color: #d0d0d0;
+  /* Cor ligeiramente mais clara para melhor legibilidade */
+  padding-right: 20px;
+  /* Espaçamento extra */
 }
 
 .projectTechnologies h3 {
   margin-bottom: 10px;
   color: #00ffcc;
-  font-size: 20px;
+  font-size: 22px;
   text-transform: uppercase;
+  text-shadow: 0px 0px 5px #00ffcc;
 }
 
 .projectTechnologies ul {
@@ -86,27 +103,34 @@
 
 .projectTechnologies li {
   margin-bottom: 5px;
+  transition: color 0.3s ease;
+  /* Transição suave nas tecnologias */
+}
+
+.projectTechnologies li:hover {
+  color: #ffffff;
+  /* Mudança de cor ao passar o mouse */
 }
 
 .projectVideo h3 {
   margin-top: 20px;
   margin-bottom: 10px;
   color: #00ffcc;
-  font-size: 20px;
+  font-size: 22px;
+  text-shadow: 0px 0px 5px #00ffcc;
 }
 
 .projectVideo video {
   width: 100%;
   height: auto;
   border-radius: 5px;
-  box-shadow: 0 4px 15px rgba(0, 168, 255, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 168, 255, 0.5);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .projectVideo video:hover {
   transform: scale(1.02);
-  box-shadow: 0 6px 20px rgba(0, 168, 255, 0.5);
-  /* Efeito de hover no vídeo aprimorado */
+  box-shadow: 0 0 25px rgba(0, 168, 255, 0.7);
 }
 
 @media (max-width: 768px) {
@@ -123,6 +147,5 @@
   .projectText {
     font-size: 18px;
     line-height: 1.8;
-    color: #bfbfbf;
   }
 }
