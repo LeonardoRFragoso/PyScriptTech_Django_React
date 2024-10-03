@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.footerSocials}>
-          <a href="mailto:seuemail@gmail.com" target="_blank" rel="noopener noreferrer" className={styles.footerSocialLink}>
+          <a href="mailto:leonardorfragoso@gmail.com" target="_blank" rel="noopener noreferrer" className={styles.footerSocialLink}>
             <img src={gmailIcon} alt="Gmail" />
           </a>
           <a href="https://www.linkedin.com/in/leonardo-fragoso-921b166a/" target="_blank" rel="noopener noreferrer" className={styles.footerSocialLink}>
