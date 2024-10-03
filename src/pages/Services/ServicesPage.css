@@ -1,0 +1,130 @@
+/* src/pages/Services/ServicesPage.css */
+
+.servicesPage {
+  padding: 100px 50px 80px;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.servicesTitle {
+  text-align: center;
+  font-size: 42px;
+  /* Tamanho maior para o título */
+  color: #00aaff;
+  margin-bottom: 40px;
+}
+
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.serviceItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* Centraliza os elementos verticalmente */
+  background-color: #1f1f1f;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.serviceItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.7);
+}
+
+.serviceImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  width: 300px;
+  margin-right: 25px;
+  /* Espaçamento ajustado para mais respiro */
+  transition: transform 0.3s ease;
+  /* Transição suave */
+}
+
+.serviceItem:hover .serviceImage {
+  transform: scale(1.05);
+  /* Aumenta a imagem levemente no hover */
+}
+
+.serviceDescription {
+  flex: 1;
+  text-align: left;
+}
+
+.serviceTitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #00aaff;
+}
+
+.serviceText {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.85;
+  /* Ajuste no espaçamento das linhas para melhor legibilidade */
+  color: #bfbfbf;
+  margin-bottom: 20px;
+  /* Espaçamento entre o texto e o botão */
+}
+
+.serviceText strong {
+  font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .serviceItem {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .serviceImage {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .serviceText {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #bfbfbf;
+  }
+
+  .serviceText strong {
+    font-weight: 600;
+  }
+}
+
+.serviceButton {
+  background-color: #00aaff;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  /* Mais espaço acima do botão */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 168, 255, 0.4);
+}
+
+.serviceButton:hover {
+  background-color: #0077cc;
+  /* Cor de fundo mais escura para hover */
+  color: #ffffff;
+  /* Mantém o texto branco no hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 168, 255, 0.6);
+  /* Sombra mais intensa */
+}

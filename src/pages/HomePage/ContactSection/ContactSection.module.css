@@ -1,0 +1,102 @@
+:root {
+  --color-bg-section: #2c2c2c;
+  --color-border: #4a4a4a;
+  --color-text-primary: #00aaff;
+  --color-text-secondary: #bfbfbf;
+  --color-placeholder: #a9a9a9;
+  --color-input-bg: #3a3a3a;
+  --color-input-bg-focus: #4c4c4c;
+  --color-btn-bg: #00aaff;
+  --color-btn-hover-bg: #0077cc;
+  --color-btn-text: #ffffff;
+  --color-shadow: rgba(0, 0, 0, 0.2);
+  --color-shadow-hover: rgba(0, 0, 0, 0.4);
+  --shadow-btn: rgba(0, 168, 255, 0.5);
+  --shadow-btn-hover: rgba(0, 168, 255, 0.5);
+  --spacing-small: 10px;
+  --spacing-medium: 15px;
+  --spacing-large: 40px;
+  --transition-fast: 0.3s;
+  --border-radius: 8px;
+}
+
+.contactSection {
+  margin-top: var(--spacing-large);
+  text-align: center;
+  background: var(--color-bg-section);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  border: 2px solid var(--color-border);
+  box-shadow: 0 4px 15px var(--color-shadow);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.contactSection:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 25px var(--color-shadow-hover);
+}
+
+.contactSection h2 {
+  margin-bottom: var(--spacing-medium);
+  font-size: 28px;
+  color: var(--color-text-primary);
+}
+
+.contactSection p {
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Estilos do formulário */
+.contactSection .contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--spacing-large);
+  width: 100%;
+}
+
+.contactSection .contactForm input,
+.contactSection .contactForm textarea {
+  width: 90%;
+  padding: var(--spacing-medium);
+  margin: var(--spacing-small) 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-input-bg);
+  color: var(--color-btn-text);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.contactSection .contactForm input::placeholder,
+.contactSection .contactForm textarea::placeholder {
+  color: var(--color-placeholder);
+}
+
+.contactSection .contactForm input:focus,
+.contactSection .contactForm textarea:focus {
+  background-color: var(--color-input-bg-focus);
+  box-shadow: 0 0 10px rgba(0, 168, 255, 0.6);
+  outline: none;
+}
+
+/* Estilo do botão */
+.contactSection .contactForm button {
+  width: auto;
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  padding: var(--spacing-medium) var(--spacing-large);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  box-shadow: 0 2px 8px var(--shadow-btn);
+  transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.contactSection .contactForm button:hover {
+  background-color: var(--color-btn-hover-bg);
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px var(--shadow-btn-hover);
+}

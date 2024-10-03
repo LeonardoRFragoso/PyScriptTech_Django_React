@@ -1,0 +1,90 @@
+:root {
+  --color-bg-section: #1f1f1f;
+  --color-bg-testimonial: #2a2a2a;
+  --color-text-title: #00aaff;
+  --color-text-testimonial: #fff;
+  --color-avatar-hover: #00aaff;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-shadow-hover: rgba(0, 0, 0, 0.7);
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 40px;
+  --transition-fast: 0.3s;
+  --border-radius: 10px;
+}
+
+.testimonialsSection {
+  margin: var(--spacing-medium);
+  text-align: center;
+  background: var(--color-bg-section);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px var(--color-shadow);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.testimonialsSection:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 30px var(--color-shadow-hover);
+}
+
+.testimonialsTitle {
+  margin-bottom: var(--spacing-medium);
+  font-size: 24px;
+  color: var(--color-text-title);
+}
+
+.testimonialsContainer {
+  margin-top: var(--spacing-medium);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonialItem {
+  margin: var(--spacing-small);
+  max-width: 250px;
+  text-align: center;
+  padding: var(--spacing-medium);
+  background: var(--color-bg-testimonial);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px var(--color-shadow);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.testimonialItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px var(--color-shadow-hover);
+}
+
+.testimonialAvatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: var(--spacing-small);
+  transition: box-shadow var(--transition-fast);
+}
+
+.testimonialAvatar:hover {
+  box-shadow: 0 0 15px var(--color-avatar-hover);
+}
+
+blockquote {
+  font-style: italic;
+  color: var(--color-text-testimonial);
+  margin: var(--spacing-small) 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .testimonialsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonialItem {
+    max-width: 100%;
+  }
+}

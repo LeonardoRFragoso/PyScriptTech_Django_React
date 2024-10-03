@@ -1,0 +1,118 @@
+:root {
+  --color-bg-section: #1f1f1f;
+  --color-text-title: #00aaff;
+  --color-text-btn: #fff;
+  --color-btn-bg: #00aaff;
+  --color-btn-hover-bg: #4ca1af;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-shadow-hover: rgba(0, 0, 0, 0.5);
+  --shadow-btn: rgba(0, 168, 255, 0.4);
+  --shadow-btn-hover: rgba(0, 168, 255, 0.6);
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 40px;
+  --border-radius: 10px;
+  --transition-fast: 0.3s;
+}
+
+.servicesSection {
+  margin: var(--spacing-medium);
+  text-align: center;
+}
+
+.sectionTitle {
+  margin-bottom: var(--spacing-medium);
+  font-size: 28px;
+  color: var(--color-text-title);
+}
+
+.servicesCarousel {
+  width: 100%;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: center;
+  background: var(--color-bg-section);
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius);
+  max-width: 100%;
+  text-align: left;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 4px 10px var(--color-shadow);
+  margin: var(--spacing-small) 0;
+}
+
+.serviceItem:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px var(--color-shadow-hover);
+}
+
+.serviceContent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.serviceImage {
+  max-width: 450px;
+  height: auto;
+  border-radius: var(--border-radius);
+  margin-right: var(--spacing-medium);
+}
+
+.serviceText {
+  max-width: 60%;
+  line-height: 1.6;
+  text-align: left;
+  padding-left: var(--spacing-small);
+}
+
+.serviceTitle {
+  margin-bottom: var(--spacing-small);
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color-text-title);
+}
+
+.serviceDescription {
+  margin-top: var(--spacing-small);
+  text-align: justify;
+}
+
+/* Botão "Saiba Mais" */
+.serviceButton {
+  background-color: var(--color-btn-bg);
+  color: var(--color-text-btn);
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 2px 5px var(--shadow-btn);
+  margin-top: var(--spacing-small);
+}
+
+.serviceButton:hover {
+  background-color: var(--color-btn-hover-bg);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px var(--shadow-btn-hover);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .serviceItem {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .serviceImage {
+    margin-bottom: var(--spacing-small);
+  }
+
+  .serviceText {
+    max-width: 100%;
+  }
+}
