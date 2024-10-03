@@ -10,16 +10,16 @@
   text-align: center;
   font-size: 42px;
   color: #00aaff;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+  /* Aumenta o espaço abaixo do título */
   text-shadow: 0px 0px 8px #00aaff;
-  /* Brilho no título */
 }
 
 .projectsContainer {
   display: flex;
   flex-direction: column;
-  gap: 70px;
-  /* Espaçamento entre os projetos */
+  gap: 60px;
+  /* Maior espaçamento entre os projetos */
   align-items: center;
 }
 
@@ -30,8 +30,9 @@
   align-items: flex-start;
   background-color: #1f1f1f;
   border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  /* Sombra mais suave */
   border: 1px solid #00aaff;
   max-width: 1000px;
   width: 100%;
@@ -41,7 +42,6 @@
 .projectItem:hover {
   transform: scale(1.03);
   box-shadow: 0 0 25px rgba(0, 168, 255, 0.7);
-  /* Brilho neon no hover */
 }
 
 .projectImage {
@@ -55,6 +55,7 @@
 
 .projectItem:hover .projectImage {
   transform: scale(1.05);
+  /* Zoom-in ao passar o mouse */
   box-shadow: 0 0 15px rgba(0, 168, 255, 0.7);
 }
 
@@ -62,13 +63,14 @@
   flex: 1;
   text-align: left;
   padding-left: 40px;
-  /* Mais espaço interno */
+  /* Ajuste de espaço à esquerda */
 }
 
 .projectTitle {
   font-size: 30px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  /* Mais espaço abaixo do título */
   color: #00aaff;
   text-shadow: 0px 0px 5px #00aaff;
   transition: text-shadow 0.3s ease;
@@ -76,16 +78,15 @@
 
 .projectTitle:hover {
   text-shadow: 0px 0px 10px #00ffcc;
+  /* Brilho maior no hover */
 }
 
 .projectText {
   font-size: 20px;
   line-height: 1.8;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #d0d0d0;
-  /* Cor ligeiramente mais clara para melhor legibilidade */
   padding-right: 20px;
-  /* Espaçamento extra */
 }
 
 .projectTechnologies h3 {
@@ -104,12 +105,11 @@
 .projectTechnologies li {
   margin-bottom: 5px;
   transition: color 0.3s ease;
-  /* Transição suave nas tecnologias */
 }
 
 .projectTechnologies li:hover {
   color: #ffffff;
-  /* Mudança de cor ao passar o mouse */
+  /* Destaque ao passar o mouse */
 }
 
 .projectVideo h3 {
@@ -129,10 +129,12 @@
 }
 
 .projectVideo video:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
+  /* Leve zoom-in no hover */
   box-shadow: 0 0 25px rgba(0, 168, 255, 0.7);
 }
 
+/* Ajuste para mobile */
 @media (max-width: 768px) {
   .projectItem {
     flex-direction: column;
