@@ -17,29 +17,29 @@ import video6 from '../../assets/video/video6.mp4'; // Caminho corrigido
 const projectsData = [
   {
     title: 'Projeto 1',
-    description: 'Descrição do projeto 1.',
-    technologies: ['React', 'Node.js', 'MongoDB'],
+    description: 'Analisador e comparador de Ações e Fiis',
+    technologies: ['Python', 'Streamlit', 'SQLite'],
     image: project1,
     video: video1
   },
   {
     title: 'Projeto 2',
-    description: 'Descrição do projeto 2.',
-    technologies: ['Python', 'Django', 'PostgreSQL'],
+    description: 'Site PyScript.tech',
+    technologies: ['Python', 'Django', 'React','PostgreSQL'],
     image: project2,
     video: video2
   },
   {
     title: 'Projeto 3',
-    description: 'Descrição do projeto 3.',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
+    description: 'Sistema de Tickets de TI para Empresa RWE Telemedicina',
+    technologies: ['Python','Flask','HTML', 'CSS', 'JavaScript'],
     image: project3,
     video: video3
   },
   {
     title: 'Projeto 4',
-    description: 'Descrição do projeto 4.',
-    technologies: ['Java', 'Spring Boot', 'MySQL'],
+    description: 'Página de Divulgação Lions Seminovos',
+    technologies: ['React', 'JavaScript', 'SCSS'],
     image: project4,
     video: video4
   },
